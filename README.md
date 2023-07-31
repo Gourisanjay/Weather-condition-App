@@ -1,3 +1,8 @@
+
+![weather1](https://github.com/Gourisanjay/Weather-condition-App/assets/123082006/309db4f9-87a9-48bb-8661-151ea30c2191)
+
+![weather2](https://github.com/Gourisanjay/Weather-condition-App/assets/123082006/29b10cb8-dc07-4ec8-bf59-33e370e638bd)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
