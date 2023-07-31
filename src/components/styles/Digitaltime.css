@@ -1,0 +1,24 @@
+.time{
+    justify-content: center;
+    display: flex;
+    font-size: 100%;
+    margin-left: 60%;
+    text-transform: uppercase;
+    color: black;
+}
+.day{
+    font-size: 100%;
+    margin-left: 60%;
+    margin-top: 5%;
+    text-transform: uppercase;  
+    
+}
+
+
+.content{
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+}
+

@@ -1,0 +1,172 @@
+/* http://api.openweathermap.org/data/2.5/weather?q=Pune&appid=b14425a6554d189a2d7dc18a8e7d7263 */
+@import url("https://fonts.googleapis.com/css2?family=jost:wght@300&display=swap");
+
+/* https://api.openweathermap.org/data/2.5/weather?q={city name}&appid=4bcf5c83b8e34875abc2d14fd9567779 */
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Jost", sans-serif;
+}
+body{
+    background: #d0c297;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+    font-family: "Jost", sans-serif;
+    background-image: url("clouds.jpg"); 
+  background-size: cover;
+}
+/* html{
+    font-size: 100%;
+    height: 100%;
+    background: #eee;
+} */
+.container{
+    width: 45vw;
+    height: 80vh;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 3rem rgba(0,0,0,0.2);
+    background: #748fb7;
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+    min-height: 25rem;
+    min-width:30rem ;
+    background-image: url("../styles/Brampton.jpg"); /* Replace "path/to/your/image.jpg" with the actual URL of your image */
+    background-size: cover;
+}
+.notdata{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20%;
+    font-size: 180%;
+    font-weight: bold;
+}
+
+
+@media(max-width:600px){
+    .container{
+        width: 90vw;
+        height: 80vh;
+        background-image: image-set(url("Brampton.jpg") 1x, url("Brampton.jpg") 2x);
+    }
+    .wave{
+        top:85%;
+    }
+    .info{
+        font-size: 1.5rem;
+    }
+}
+.wave{
+    opacity: 0.3;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    background: rgb(36, 33, 33);
+    width: 50rem;
+    height: 50rem;
+    margin-left: -25rem;
+    margin-top: -20rem;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift  3000ms infinite linear;
+    z-index: 1;
+}
+.wave.-three{
+    animation: drift  5000ms infinite linear;
+    z-index: 2 !important;
+    opacity: 0.2;
+}
+.wave.-two{
+    animation: drift  7000ms infinite linear;
+    z-index: 3 !important;
+    opacity: 0.1;
+}
+
+@keyframes drift {
+    from{
+        transform: rotate(0deg);
+    }
+    from{
+        transform: rotate(360deg);
+    }
+}
+.info{
+    position: absolute;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    z-index: 4;
+}
+
+.location{
+    margin-top: 6.5rem;
+    text-align: center;
+    font-weight: 900;
+    text-transform: capitalize;
+    color: black;
+    margin-bottom: 10px;
+    
+}
+
+.location .svg-inline--fa {
+    margin-right: 5px;
+    animation: rotates 3s linear infinite alternate;
+  }
+
+  .temp{
+    color: rgb(36, 33, 33);
+    margin-bottom: 40px;
+    font-weight:  bold;
+  }
+  .tempmin_max{
+    color: rgb(28, 23, 23);
+    margin-bottom: 10px;
+    font-size: x-large;
+    
+  }
+
+@keyframes rotates {
+    from{
+        transform: translateX(-0.5rem);
+    }
+    to{
+        transform: translateX(0.5rem);
+    }
+}
+
+@media(max-height:500px){
+    .container{
+        height: 80vh;
+        background-image: image-set(url("Brampton.jpg") 1x, url("Brampton.jpg") 2x);
+    }
+    .wave{
+        top:115%;
+    }
+}
+
+.inputData{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   margin-top: 20px;
+    
+}
+.inputField{
+    width: 50%;
+    height: 20%;
+    margin: auto;
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 5rem;
+    padding: 1rem 1rem;
+    background-color: rgb(199, 191, 191);
+    
+
+}
